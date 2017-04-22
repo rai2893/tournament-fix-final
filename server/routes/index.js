@@ -47,13 +47,13 @@ router.get('/login', (req, res, next) => {
 		});
 		return; 
 	} else {
-		return res.redirect('/eightPlayer'); //redirect to contacts list
+		return res.redirect('/brackets/index'); //redirect to contacts list
 	}
 });
 
 // POST /Login - process the Login attempt
 router.post('/login', passport.authenticate('local', {
-	successRedirect: '/eightPlayer',
+	successRedirect: '/brackets/index',
 	failureRedirect: '/login',
 	failureFlash: "Incorrect Username/Password", // match the loginMessage above
 }));
@@ -71,7 +71,7 @@ router.get('/register', (req, res, next)=>{
 		});
 		return;
 	} else {
-		return res.redirect('/eightPlayer'); // redirect to Contacts list
+		return res.redirect('//brackets/index'); // redirect to brackets list
 	}
 });
 
@@ -100,7 +100,7 @@ router.post('/register', (req, res, next)=>{
 			}
 			// if registration is successful
 			return passport.authenticate('local')(req, res, ()=>{
-				res.redirect('/eightPlayer');
+				res.redirect('/brackets/index');
 			});
 		});
 });

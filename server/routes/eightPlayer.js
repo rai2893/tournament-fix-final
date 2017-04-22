@@ -3,7 +3,7 @@ let router = express.Router();
 let mongoose = require('mongoose');
 
 // define the user model
-let UserModel = require('../models/eightPlayer');
+let UserModel = require('../models/user');
 let User = UserModel.User; // alias for User
 
 let tournament = require('../models/eightPlayer');
@@ -18,7 +18,7 @@ function requireAuth(req, res, next) {
 
 /* GET BRACKET List page. READ */
 router.get('/', (req, res, next) => {
-    res.render('brackets/eightPlayer', {
+    res.render('/eightPlayer', {
         title: 'Tournament Bracket',
         username: req.user ? req.user.username : '',
         tournament: newtournament  
@@ -27,7 +27,7 @@ router.get('/', (req, res, next) => {
 
 /* GET tournament page. */
 router.get('/eightPlayer', requireAuth, (req, res, next) => {
-    res.render('brackets/eightPlayer', {
+    res.render('brackets/index', {
         title: 'Tournament List',
         username: req.user ? req.user.username : ''
     });
@@ -35,7 +35,7 @@ router.get('/eightPlayer', requireAuth, (req, res, next) => {
 
 
 /* POST tournament Page - Process the tournament page */
-router.post('/eightPlayerBracket', requireAuth, (req, res, next) => {
+router.post('/eightPlayer', requireAuth, (req, res, next) => {
     let object = {
         'rounds': [{
             'round1': [{
