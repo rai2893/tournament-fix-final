@@ -3,7 +3,7 @@ let router = express.Router();
 let mongoose = require('mongoose');
 
 // define the user model
-let UserModel = require('../models/user');
+let UserModel = require('../models/eightPlayer');
 let User = UserModel.User; // alias for User
 
 let tournament = require('../models/eightPlayer');
