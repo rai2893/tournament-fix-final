@@ -1,0 +1,39 @@
+<% include ../partials/header.ejs %>
+
+  <div class="panel-body">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+
+      <h4>TOURNAMENT SETUP</h4>
+<!-- Number of Player box Start -->
+        <div class="well carousel-search hidden-phone">
+          <div class="btn-group">
+            <a class="btn dropdown-toggle btn-select" data-toggle="dropdown" href="#">SELECT NUMBER OF PLAYERS <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/content/eightPlayer">8 Players</a></li>
+              
+            </ul>
+          </div>
+
+<!-- Enter 8 Player Start -->
+<form method = "post" class = "form" id="eightManForm">
+  <h4>ENTER PLAYERS</h4>
+  <div class="well carousel-search hidden-phone">
+    <div class="btn-group">
+        <a href="#"></a> PLAYER 1: <input type="text" class = "form-control" id="player1" placeholder="player1" name = "player1" required></input>
+        <a href="#"></a> PLAYER 2: <input type="text" class = "form-control" id="player2" placeholder="player2" name = "player2" required></input>
+        <a href="#"></a> PLAYER 3: <input type="text" class = "form-control" id="player3" placeholder="player3" name = "player3" required></input>
+        <a href="#"></a> PLAYER 4: <input type="text" class = "form-control" id="player4" placeholder="player4" name = "player4" required></input>
+        <a href="#"></a> PLAYER 5: <input type="text" class = "form-control" id="player5" placeholder="player5" name = "player5" required></input>
+        <a href="#"></a> PLAYER 6: <input type="text" class = "form-control" id="player6" placeholder="player6" name = "player6" required></input>
+        <a href="#"></a> PLAYER 7: <input type="text" class = "form-control" id="player7" placeholder="player7" name = "player7" required></input>
+        <a href="#"></a> PLAYER 8: <input type="text" class = "form-control" id="player8" placeholder="player8" name = "player8" required></input>
+      </br>
+            <button type="submit" class="btn btn-primary"> Submit </button>
+            <a href="/" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
+  </div>
+  </div>
+<!-- Enter 8 Player End -->
+</div>
+</div>
+<% include ../partials/footer.ejs %>
