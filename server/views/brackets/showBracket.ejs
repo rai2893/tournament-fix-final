@@ -1,0 +1,9 @@
+<% include ../partials/header.ejs %>
+<div> 
+    <% Tourney.map ( (t) => { %>
+        <a href="/bracket/<%= t._id %>" name="title"> <%= t.rounds[0].title %></a>
+        <br>
+    <% }) %>
+</div>
+
+<% include ../partials/footer.ejs %>

@@ -3,7 +3,7 @@ let router = express.Router();
 let mongoose = require('mongoose');
 
 // define the user model
-let UserModel = require('../models/eightPlayer');
+let UserModel = require('../models/users');
 let User = UserModel.User; // alias for User
 
 let tournament = require('../models/eightPlayer');
@@ -18,21 +18,41 @@ function requireAuth(req, res, next) {
 
 /* GET BRACKET List page. READ */
 router.get('/', (req, res, next) => {
-    res.render('/eightPlayer', {
-        title: 'Tournament Bracket',
-        username: req.user ? req.user.username : '',
-        tournament: newtournament  
-    });
+    if (req.user !== undefined) {
+        Tournament.find({ userID: req.user.username },
+            (err, newtournament) => {
+                res.render('bracket/index', {
+                    title: 'Tournament Bracket 8 Players',
+                    username: req.user ? req.user.username : '',
+                    Tournament: newtournament
+                })
+            })
+    } else {
+        Tournament.find({},
+            (err, newtournament) => {
+                res.render('brackets/viewbracket8', {
+                    title: 'Tournament Bracket 8',
+                    username: req.user ? req.user.username : '',
+                    Tournament: newtournament
+                })
+            })
+    }
 })
-
-/* GET tournament page. */
-router.get('/eightPlayer', requireAuth, (req, res, next) => {
+/* GET tourney page. */
+router.get('/index', requireAuth, (req, res, next) => {
     res.render('brackets/index', {
-        title: 'Tournament List',
+        title: 'Tournament',
         username: req.user ? req.user.username : ''
     });
 });
 
+/* GET tourney page. */
+router.get('/eightPlayer', requireAuth, (req, res, next) => {
+    res.render('brackets/eightPlayer', {
+        title: '8 Player Tournament',
+        username: req.user ? req.user.username : ''
+    });
+});
 
 /* POST tournament Page - Process the tournament page */
 router.post('/eightPlayer', requireAuth, (req, res, next) => {
