@@ -2,10 +2,10 @@
 
 ## Welcome to tournament fix
 
-##quick install
+## quick install
 please use **`npm install`** to install project dependencies
 
-## regular install 
+### regular install 
 **`$ npm install`**
 **`$ npm install jquery-brackets`**
 **`$ npm install node-jsdom`**
