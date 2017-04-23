@@ -11,7 +11,7 @@ let tournament = require('../models/eightPlayer');
 //check if authenticated
 function requireAuth(req, res, next) {
     if (!req.isAuthenticated()) {
-        return res.redirect('/user/login');
+        return res.redirect('/auth/login');
     }
     next();
 }
@@ -21,7 +21,7 @@ router.get('/', (req, res, next) => {
     if (req.user !== undefined) {
         Tournament.find({ userID: req.user.username },
             (err, newtournament) => {
-                res.render('bracket/index', {
+                res.render('brackets/index', {
                     title: 'Tournament Bracket 8 Players',
                     username: req.user ? req.user.username : '',
                     Tournament: newtournament
@@ -30,8 +30,8 @@ router.get('/', (req, res, next) => {
     } else {
         Tournament.find({},
             (err, newtournament) => {
-                res.render('brackets/viewbracket8', {
-                    title: 'Tournament Bracket 8',
+                res.render('brackets/index', {
+                    title: 'Tournament Bracket 8 players',
                     username: req.user ? req.user.username : '',
                     Tournament: newtournament
                 })
