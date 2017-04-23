@@ -134,7 +134,7 @@ router.post('/eightPlayer', requireAuth, (req, res, next) => {
         if (err) {
             res.end(err);
         } else {
-            res.redirect('/eightPlayerBracket/' + tournament._id);
+            res.redirect('/eightPlayer/' + tournament._id);
         }
     })
 });

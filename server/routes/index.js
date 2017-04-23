@@ -33,6 +33,28 @@ router.get('/', (req, res, next) => {
 	 });
 });
 
+/* GET home page. wildcard */
+router.get('/raibrackets', (req, res, next) => {
+	res.render('brackets/index', {
+		title: 'Home',
+		contacts: '',
+		displayName: req.user ? req.user.displayName: ''
+	 });
+});
+
+
+/* GET home page. wildcard */
+router.get('/raibrackets8', (req, res, next) => {
+	res.render('brackets/index', {
+		title: 'Home',
+		contacts: '',
+		displayName: req.user ? req.user.displayName: ''
+	 });
+});
+
+
+
+
 
 // GET /Login - render the Login view
 router.get('/login', (req, res, next) => {
@@ -47,13 +69,13 @@ router.get('/login', (req, res, next) => {
 		});
 		return; 
 	} else {
-		return res.redirect('/brackets/index'); //redirect to contacts list
+		return res.redirect('/raibrackets'); //redirect to contacts list
 	}
 });
 
 // POST /Login - process the Login attempt
 router.post('/login', passport.authenticate('local', {
-	successRedirect: '/brackets/index',
+	successRedirect: '/raibrackets',
 	failureRedirect: '/login',
 	failureFlash: "Incorrect Username/Password", // match the loginMessage above
 }));
@@ -71,7 +93,7 @@ router.get('/register', (req, res, next)=>{
 		});
 		return;
 	} else {
-		return res.redirect('//brackets/index'); // redirect to brackets list
+		return res.redirect('/brackets/index'); // redirect to brackets list
 	}
 });
 
