@@ -122,7 +122,7 @@ router.post('/register', (req, res, next)=>{
 			}
 			// if registration is successful
 			return passport.authenticate('local')(req, res, ()=>{
-				res.redirect('/brackets/index');
+				res.redirect('/raibrackets');
 			});
 		});
 });
