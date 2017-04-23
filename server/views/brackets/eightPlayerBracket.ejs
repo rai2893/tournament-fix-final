@@ -7,7 +7,7 @@
         
 
             <div class="round r-of-8" name = "round1">
-     <!--       
+         
             <label>Round 1</label>
                 <div class="bracket-game" name = "pair1">
                  <form method = "post">
@@ -180,39 +180,13 @@
                     </div>
                 </div>
             </div>
-                 <i class="fa fa-trophy fa-lg" aria-hidden="true"> Winner </i>
+            <
+            <div class= "winner-label"> </div>
+                 <i class="winner" aria-hidden="true"> Winner </i>
                  <input type ="text" class = "input-text" size="8" name = "winner" id = "winner" placeholder = "" value = "" readonly> </input>
+                 </div>
 
-                 -->
-               <div class="tournament8-wrap">
-		<div class="round4-top winner4">Winner</div>
-		<div class="round3-topwrap">
-			<div class="round3-top">Top finalist</div>
-			<div class="round2-topwrap">
-				<div class="round2-top"><input type="hidden" name="group1winner" /></div>
-				<div class="round1-top"><input type="text" name="round1player1winner" value=<%=tournament.rounds[0].round1[0].pair1[0].playerName%>/>   <input type="button" name = "playonebutton" id = "player1id" class="mybutton" value =">"> </input></div>
-				<div class="round1-bottom"><%=tournament.rounds[0].round1[0].pair1[1].playerName%>   <input type="button" name = "playtwobutton" id = "player2id" class="mybutton" value =">"></div>
-			</div>
-			<div class="round2-bottomwrap">
-				<div class="round2-bottom"><input type="hidden" name="group1winner" /</div>
-				<div class="round1-top"><input type="text" name="round1player1winner" value=<%=tournament.rounds[0].round1[0].pair2[0].playerName%>/>   <input type="button" name = "playthreebutton" id = "player3id" class="mybutton" value =">"></div>
-				<div class="round1-bottom"><%=tournament.rounds[0].round1[0].pair2[1].playerName%>   <input type="button" name = "playfourbutton" id = "player4id" class="mybutton" value =">"></div>
-			</div>
-		</div>
-		<div class="round3-bottomwrap">
-			<div class="round3-bottom">Bottom finalist</div>
-			<div class="round2-topwrap">
-				<div class="round2-top">2-7 winner</div>
-				<div class="round1-top"><%=tournament.rounds[0].round1[0].pair3[0].playerName%>   <input type="button" name = "playfourbutton" id = "player5id" class="mybutton" value =">"></div>
-				<div class="round1-bottom"><%=tournament.rounds[0].round1[0].pair3[1].playerName%>   <input type="button" name = "playfivebutton" id = "player6id" class="mybutton" value =">"></div>
-			</div>
-			<div class="round2-bottomwrap">
-				<div class="round2-bottom">3-6 winner</div>
-				<div class="round1-top"><%=tournament.rounds[0].round1[0].pair4[0].playerName%>    <input type="button" name = "playsixbutton" id = "player7id" class="mybutton" value =">"></div>
-				<div class="round1-bottom"><%=tournament.rounds[0].round1[0].pair4[1].playerName%>   <input type="button" name = "playeightbutton" id = "player8id" class="mybutton" value =">"></div>
-			</div>
-		</div>
-	</div>
+
 
     <script>
         window.onload = function () {
