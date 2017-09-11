@@ -72,3 +72,191 @@ body {
     background-color: #0107f9;
   }
 }
+
+
+a {
+  color: #00B7FF;
+} 
+
+.round {
+  float: left;
+}
+.round.r-of-4 {
+  
+}
+.round.r-of-2 {
+  margin-top: 100px;
+  margin-left: 0px; 
+  
+}
+.round-2-label{
+  margin-top: 0px;
+  margin-left: 0px;
+}
+.round-3-label{
+  margin-top: 0px;
+  margin-left: 0px;
+}
+.winner-label{
+  margin-top: 350px;
+  margin-left: 10px;
+}
+.round.r8{
+  margin-top: 100px;
+  margin-left: 0px;
+}
+.round.r3{
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 0px;
+}
+.bracket-game {
+  max-width: 125px;
+  margin: 10px 0;
+  
+}
+.bracket-game6 {
+  max-width: 125px;
+  margin: 10px 0;
+  margin-top: 220px;
+  
+}
+.bracket-game8 {
+  max-width: 125px;
+  margin: 10px 0;
+  margin-top: 230px;
+  
+}
+.player {
+  min-width: 100px;
+  padding-left: 10px;
+  height: 100px;
+  width: 100px;
+}
+.player.top {
+  border-radius: 2px 2px 0 0;
+}
+.player.bot {
+  border-radius: 0 0 2px 2px;
+}
+.player .score {
+  display: inline;
+  float: right;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+.connectors {
+  float: left;
+  min-width: 35px;
+}
+.connectors.r-of-3 .top-line {
+  position: relative;
+  bottom: 208px;
+  right: 95px;
+  width: 40px;
+
+  
+}
+.connectors.r-of-3 .bottom-line {
+  position: relative;
+   top: 1px;
+  right: 95px;
+  width: 40px;
+
+  
+
+}
+.connectors.r-of-3 .vert-line {
+  position: relative;
+  top: -210px;
+  left: -145px;
+  height: 210px;
+
+  
+
+}
+.connectors.r-of-3 .next-line {
+  position: relative;
+  top: -325px;
+  left: -55px;
+  width: 90px;
+ 
+
+
+}
+.connectors.r-of-4 .top-line {
+  position: relative;
+  top: 210px;
+  width: 40px;
+
+
+ 
+}
+.connectors.r-of-4 .bottom-line {
+  position: relative;
+  top: 630px;
+  width: 40px;
+ 
+
+}
+.connectors.r-of-4 .vert-line {
+  position: relative;
+  top: 205px;
+  left: -50px;
+  height: 425px;
+
+}
+.connectors.r-of-4 .next-line {
+  position: relative;
+  top: 1px;
+  left: 40px;
+  width: 90px;
+ 
+
+}
+.connectors.r-of-2 .top-line {
+  position: relative;
+  top: 110px;
+  width: 40px;
+
+ 
+}
+.connectors.r-of-2 .bottom-line {
+  position: relative;
+  top: 310px;
+  width: 40px;
+
+
+}
+.connectors.r-of-2 .vert-line {
+  position: relative;
+  top: 106px;
+  left: -50px;
+  height: 210px;
+
+}
+.connectors.r-of-2 .next-line {
+  position: relative;
+  top: -4px;
+  left: 40px;
+  width: 90px;
+ 
+}
+.clear {
+  clear: both;
+}
+
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+.tournament4-wrap, .tournament8-wrap, .tournament16-wrap, .tournament32-wrap {
+	text-align: center;
+}

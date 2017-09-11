@@ -120,7 +120,7 @@ router.post('/eightPlayer', requireAuth, (req, res, next) => {
                     }
                 ]
             }],
-            //'winner1': req.body.player1, 'status': req.body.status, 'title': req.body.eightManTitle
+            'winner1': req.body.player1, 'status': req.body.status, 'title': req.body.eightPlayerTitle
         }],
         userID: String
     }

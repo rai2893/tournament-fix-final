@@ -3,13 +3,17 @@
     <div class="panel-body">
         <div class="col-md-2"></div>
         <div class="col-md-8">
+        <h3>8 player tournament</h3>
+        
 
             <div class="round r-of-8" name = "round1">
+         
+            <label>Round 1</label>
                 <div class="bracket-game" name = "pair1">
                  <form method = "post">
                     <div class="player top win" name = "player1">
                             <input type ="text" id = "round1player1winner" size="8" value = "<%= tournament.rounds[0].round1[0].pair1[0].playerName %>" readonly> </label>
-                            <input type="button" name = "inputbox1" id = "player1id" class="btn btn-primary" value =">"> </input>
+                            <input type="button" name = "inputbox1" id = "player1id" class="btn btn-primary" value ="w"> </input>
 
                             <input class="pretend" name = "player" value= "tournament.rounds[0].round1[0].pair1[0].playerName" style= "visibility: hidden" size ="1">
                             <input name = "win" value = "tournament.rounds[0].round1[0].pair1[0].Wins" style= "visibility: hidden" size ="1">
@@ -18,7 +22,7 @@
                     </div>
                     <div class="player bot loss" name = "player2">
                             <input type ="text" id = "round1player2winner" size="8" value = "<%= tournament.rounds[0].round1[0].pair1[1].playerName %>" readonly> </label>
-                            <input type="button" name = "inputbox2" id = "player2id" class="btn btn-primary" value =">"> </input>
+                            <input type="button" name = "inputbox2" id = "player2id" class="btn btn-primary" value ="w"> </input>
 
                             <input class="pretend" name = "player" value= "tournament.rounds[0].round1[0].pair1[1]._id" style= "visibility: hidden" size ="1">
                             <input name = "win" value = "tournament.rounds[0].round1[0].pair1[0].Wins" style= "visibility: hidden" size ="1">
@@ -31,7 +35,7 @@
                 <div class="bracket-game cont" name= "pair2">
                     <div class="player top loss" name = "player3">
                             <input type ="text" id = "round1player3winner" size="8" value = "<%= tournament.rounds[0].round1[0].pair2[0].playerName %>" readonly> </label>
-                            <input type="button" name = "inputbox3" id = "player3id" class="btn btn-primary" value =">"> </input>
+                            <input type="button" name = "inputbox3" id = "player3id" class="btn btn-primary" value ="w"> </input>
 
                             <input class="pretend" name = "player" value= "tournament.rounds[0].round1[0].pair1[2]._id" style= "visibility: hidden" size ="1">
                             <input name = "win" value = "tournament.rounds[0].round1[0].pair1[0].Wins" style= "visibility: hidden" size ="1">
@@ -40,7 +44,7 @@
                     </div>
                     <div class="player bot win" name = "player4">
                             <input type ="text" id = "round1player4winner" size="8" value = "<%= tournament.rounds[0].round1[0].pair2[1].playerName %>" readonly> </label>
-                            <input type="button" name = "inputbox4" id = "player4id" class="btn btn-primary" value =">"> </input>
+                            <input type="button" name = "inputbox4" id = "player4id" class="btn btn-primary" value ="w"> </input>
 
                             <input class="pretend" name = "player" value= "tournament.rounds[0].round1[0].pair1[3]._id" style= "visibility: hidden" size ="1">
                             <input name = "win" value = "tournament.rounds[0].round1[0].pair1[0].Wins" style= "visibility: hidden" size ="1">
@@ -52,7 +56,7 @@
                 <div class="bracket-game cont" name= "pair3">
                     <div class="player top loss" name = "player5">
                             <input type ="text" id = "round1player5winner" size="8" value = "<%= tournament.rounds[0].round1[0].pair3[0].playerName %>" readonly> </label>
-                            <input type="button" name = "inputbox5" id = "player5id" class="btn btn-primary" value =">"> </input>
+                            <input type="button" name = "inputbox5" id = "player5id" class="btn btn-primary" value ="w"> </input>
 
                             <input class="pretend" name = "player" value= "tournament.rounds[0].round1[0].pair1[1]._id" style= "visibility: hidden" size ="1">
                             <input name = "win" value = "tournament.rounds[0].round1[0].pair1[0].Wins" style= "visibility: hidden" size ="1">
@@ -62,7 +66,7 @@
                     
                     <div class="player bot win" name = "player6">
                             <input type ="text" id = "round1player6winner" size="8" value = "<%= tournament.rounds[0].round1[0].pair3[1].playerName %>" readonly> </label>
-                            <input type="button" name = "inputbox6" id = "player6id" class="btn btn-primary" value =">"> </input>
+                            <input type="button" name = "inputbox6" id = "player6id" class="btn btn-primary" value ="w"> </input>
 
                             <input class="pretend" name = "player" value= "tournament.rounds[0].round1[0].pair1[1]._id" style= "visibility: hidden" size ="1">
                             <input name = "win" value = "tournament.rounds[0].round1[0].pair1[0].Wins" style= "visibility: hidden" size ="1">
@@ -74,7 +78,7 @@
                 <div class="bracket-game cont" name= "pair4">
                     <div class="player top loss" name = "player7">
                             <input type ="text" id = "round1player7winner" size="8" value = "<%= tournament.rounds[0].round1[0].pair4[0].playerName %>" readonly> </label>
-                            <input type="button" name = "inputbox7" id = "player7id" class="btn btn-primary" value =">"> </input>
+                            <input type="button" name = "inputbox7" id = "player7id" class="btn btn-primary" value ="w"> </input>
 
                             <input class="pretend" name = "player" value= "tournament.rounds[0].round1[0].pair1[1]._id" style= "visibility: hidden" size ="1">
                             <input name = "win" value = "tournament.rounds[0].round1[0].pair1[0].Wins" style= "visibility: hidden" size ="1">
@@ -83,7 +87,7 @@
                     </div>
                     <div class="player bot win" name = "player8">
                             <input type ="text" id = "round1player8winner" size="8" value = "<%= tournament.rounds[0].round1[0].pair4[1].playerName %>" readonly> </label>
-                            <input type="button" name = "inputbox8" id = "player8id" class="btn btn-primary" value =">"> </input>
+                            <input type="button" name = "inputbox8" id = "player8id" class="btn btn-primary" value ="w"> </input>
 
                             <input class="pretend" name = "player" value= "tournament.rounds[0].round1[0].pair1[1]._id" style= "visibility: hidden" size ="1">
                             <input name = "win" value = "tournament.rounds[0].round1[0].pair1[0].Wins" style= "visibility: hidden" size ="1">
@@ -103,12 +107,13 @@
                 <div class="next-line"></div>
                 <div class="clear"></div>
             </div>
-                        
+                  <div class= "round-2-label"> <label>Round 2</label></div>         
             <div class="round r8" name = "round2">
+          
                 <div class="bracket-game" name = "pair5">
                     <div class="player top loss" name = "player9">
                         <input type = "text" class = "input-text" size="8" name = "round2name1" id = "round2name1" placeholder = "" value = "" readonly>
-                        <input type="button" name = "inputbox9" id = "player9id" class="btn btn-primary" value =">"> </input>
+                        <input type="button" name = "inputbox9" id = "player9id" class="btn btn-primary" value ="w"> </input>
                         <div class="score">
                             
                         </div>
@@ -116,7 +121,7 @@
                     
                     <div class="player bot win" name = "player10">
                         <input type = "text" class = "input-text" size="8" name = "round2name2" id = "round2name2" placeholder = "" value = "" readonly>
-                        <input type="button" name = "inputbox10" id = "player10id" class="btn btn-primary" value =">"> </input>
+                        <input type="button" name = "inputbox10" id = "player10id" class="btn btn-primary" value ="w"> </input>
                         <div class="score">
 
                         </div>
@@ -126,14 +131,14 @@
                 <div class="bracket-game6" name = "pair6">
                     <div class="player top loss" name = "player11">
                         <input type = "text" class = "input-text" size="8" name = "round2name3" id = "round2name3" placeholder = "" value = "" readonly>
-                        <input type="button" name = "inputbox11" id = "player11id" class="btn btn-primary" value =">"> </input>
+                        <input type="button" name = "inputbox11" id = "player11id" class="btn btn-primary" value ="w"> </input>
                         <div class="score">
         
                         </div>
                     </div>
                     <div class="player bot win" name = "player12">
                         <input type = "text" class = "input-text" size="8" name = "round2name4" id = "round2name4" placeholder = "" value = "" readonly>
-                        <input type="button" name = "inputbox12" id = "player12id" class="btn btn-primary" value =">"> </input>
+                        <input type="button" name = "inputbox12" id = "player12id" class="btn btn-primary" value ="w"> </input>
                         <div class="score">
                             
                         </div>
@@ -162,23 +167,25 @@
                 <div class="next-line"></div>
                 <div class="clear"></div>
             </div>
-
+            <div class= "round-3-label"> <label>Round 3</label></div>   
             <div class="round r3" name = "round3">
                 <div class="bracket-game8" name = "pair7">
                     <div class="player top loss" name = "player13">
                         <input type = "text" class = "input-text" size="8" name = "round3name1" id = "round3name1" placeholder = "" value = "" readonly>
-                        <input type="button" name = "inputbox13" id = "player13id" class="btn btn-primary" value =">"> </input>
+                        <input type="button" name = "inputbox13" id = "player13id" class="btn btn-primary" value ="w"> </input>
                     </div>
                     <div class="player bot win" name = "player14">
                         <input type = "text" class = "input-text"  size="8" name = "round3name2" id = "round3name2" placeholder = "" value = "" readonly>
-                        <input type="button" name = "inputbox14" id = "player14id" class="btn btn-primary" value =">"> </input>
+                        <input type="button" name = "inputbox14" id = "player14id" class="btn btn-primary" value ="w"> </input>
                     </div>
                 </div>
             </div>
-                 <i class="fa fa-trophy fa-lg" aria-hidden="true"> Winner </i>
+            <
+            <div class= "winner-label"> </div>
+                 <i class="winner" aria-hidden="true"> Winner </i>
                  <input type ="text" class = "input-text" size="8" name = "winner" id = "winner" placeholder = "" value = "" readonly> </input>
-            </div>
-        </div>
+                 </div>
+
 
 
     <script>

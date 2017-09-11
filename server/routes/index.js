@@ -36,7 +36,7 @@ router.get('/', (req, res, next) => {
 /* GET home page. wildcard */
 router.get('/raibrackets', (req, res, next) => {
 	res.render('brackets/index', {
-		title: 'Home',
+		title: 'Brackets',
 		contacts: '',
 		displayName: req.user ? req.user.displayName: ''
 	 });
@@ -122,7 +122,7 @@ router.post('/register', (req, res, next)=>{
 			}
 			// if registration is successful
 			return passport.authenticate('local')(req, res, ()=>{
-				res.redirect('/brackets/index');
+				res.redirect('/raibrackets');
 			});
 		});
 });
